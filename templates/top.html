@@ -1,0 +1,26 @@
+{% extends 'layout.html'%}
+{% block body %}
+
+<div class="container w-75" >
+  <table class="table table-hover w-100 " >
+      <tbody>
+      <tr>
+      <th scope="col" colspan="2" class="table-info text-center">mahmoud-Lenovo-G50-70</th>
+
+    </tr>
+      <tr>
+          <td class="text-center bg-info ">Package </td>
+          <td  class="text-center table-primary">firefox</td>
+        </tr>
+      {% for key,value in v.items() %}
+        <tr>
+          <td class="text-center bg-info ">{{ key }} </td>
+          <td  class="text-center table-primary">{{ value }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+
+
+{% endblock %}

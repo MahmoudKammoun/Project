@@ -1,0 +1,31 @@
+{% extends 'layout.html'%}
+{% block body %}
+{% for key,value in result.items() %}
+<div class="card mx-auto d-block border border-secondary shadow-lg p-3 mb-5  rounded" style="width: 48rem;" >
+  <div class="card-header text-center text-capitalize fs-5 fw-bold ">
+	General information of {{value}} SERVER: {{name}}
+  </div>
+  <ul class="list-group list-group-flush ">
+    <li class="list-group-item fw-bolder  ">Memory utilization :
+		<div class="progress fs-6 text-center" style="height: 20px;">
+  <div class="progress-bar" role="progressbar" style="width: {{memory}}%;" aria-valuenow="{{memory}}" aria-valuemin="0" aria-valuemax="100">{{memory}} %</div>		</div>
+	</li>
+
+    <li class="list-group-item fw-bolder ">Space utilization :
+		<div class="progress fs-6" style="height: 20px;">
+		  <div class="progress-bar" role="progressbar" style="width: {{space}}%;" aria-valuenow="{{space}}" aria-valuemin="0" aria-valuemax="100">{{space}} %</div>
+		</div>
+	</li>
+    <li class="list-group-item fw-bolder">CPU utilization :
+		<div class="progress fs-6" style="height: 20px;">
+		  <div class="progress-bar" role="progressbar" style="width: {{cpu}}%;" aria-valuenow="{{cpu}}" aria-valuemin="0" aria-valuemax="100">{{cpu}} %</div>
+		</div>
+	</li>
+  </ul>
+</div>
+
+
+{% endfor %}
+
+{% endblock %}
+

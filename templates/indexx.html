@@ -1,0 +1,28 @@
+{% extends 'layout.html'%}
+{% block body %}
+
+<body>
+<table class="table table-hover table-bordered border-primary">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center ">{{type}}</th>
+      <th scope="col"  class="text-center">Size</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+      <th scope="col" colspan="2" class="table-info text-center">mahmoud-Lenovo-G50-70</th>
+
+    </tr>
+  {% for key,value in result.items() %}
+    <tr>
+      <td >{{ key }} </td>
+      <td  class="text-center">{{ value }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+</table>
+</body>
+{% endblock %}
